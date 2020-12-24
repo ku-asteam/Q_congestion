@@ -1,6 +1,7 @@
 Q-learning based Congestion Control Algorithm model for Linux kernel
 ================================================================================
 
+Q-learning based congestion control algorithm model is a implementation of aSTEAM Project https://asteam.korea.ac.kr. 
 This is the congestion control algorithm model using the Q-learning, one of the reinforcement learning algorithm, to test the possibility of machine learning in congestion control.
 
 
