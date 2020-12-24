@@ -13,19 +13,8 @@ The version of Operating stystem: Ubuntu 18.04
 
 Requirements
 --------------------------------------------------------------------------------
-1) python-pip	>> apt-get install python-pip
-2) mininet	>> apt-get install mininet
-3) ethtool	>> apt-get ethtool
-4) moreutils	>> apt-get netcat
-5) python	>> apt-get install python
-6) dpkt		>> pip install dpkt==1.9.1
-7) numpy	>> pip install numpy==1.14.0
-8) matplotlib	>> pip install matplotlib==2.1.1
-
-	You can install all of them using 'install.sh' shell script
-	ex>  sudo ./install.sh
-	
-9) Only Reno and CUBIC congestion control algorithms can be used in the Linux kernel for general distribution. Therefore, If you want to perform an experiment using various congestion control algorithms, you should compile and add the congestion control you want to test in the form of a kernel module, or download the full Linux kernel from the web site and install the congestion control you want to add. 
+Nothing special...
+This congestion control module can be linux kernel with "make"
 
 Running
 --------------------------------------------------------------------------------
@@ -35,4 +24,12 @@ make all
 
 2) **insert module**    
 insmod q_cong.ko    
+
+3) **check the congestion control**
+sysctl net | grep congestion
+
+If compiled and inserted normally, q_cong would have been added to 'net.ipv4.tcp_allowed_congestion_control'.
+
+4) **Remove module**
+rmmod q_cong.ko
 
